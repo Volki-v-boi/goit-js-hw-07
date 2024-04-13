@@ -7,8 +7,8 @@ form.addEventListener("submit", (event) => {
   const data = {};
 
   for (const [name, value] of formData) {
-    if (!value) {
-      console.log("All form fields must be filled in");
+    if (value.trim() === "") {
+      alert("All form fields must be filled in");
       return;
     }
 
